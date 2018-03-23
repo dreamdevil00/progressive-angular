@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+$navbar-brand-logo: url('./assets/brand-logo.png');
+$navbar-brand-minimized-logo: url('./assets/brand-logo.png');
+@import './scss/style.scss';
+@import './packages/theme/styles/index.scss';
+@import '~font-awesome/css/font-awesome.css';
+@import '~simple-line-icons/css/simple-line-icons.css';

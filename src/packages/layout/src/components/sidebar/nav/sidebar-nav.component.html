@@ -1,0 +1,12 @@
+<nav class="sidebar-nav">
+  <ul class="nav">
+    <ng-template ngFor let-navitem [ngForOf]="sidebarNav">
+      <ng-template [ngIf]="isTitle(navitem)">
+        <app-sidebar-nav-title [menu]="navitem"></app-sidebar-nav-title>
+      </ng-template>
+      <ng-template [ngIf]="!isTitle(navitem)">
+        <app-sidebar-nav-item [item]="navitem"></app-sidebar-nav-item>
+      </ng-template>
+    </ng-template>
+  </ul>
+</nav>

@@ -9,6 +9,8 @@ import {
 
 declare const require: any;
 
+import {} from 'jasmine';
+
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,

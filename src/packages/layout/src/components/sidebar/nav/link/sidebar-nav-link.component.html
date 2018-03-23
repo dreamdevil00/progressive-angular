@@ -1,0 +1,17 @@
+<a *ngIf="!hasExternalLink(); else external"
+  [ngClass]="'nav-link'"
+  routerLinkActive="active"
+  [routerLink]="[menu.link]"
+  >
+  <i *ngIf="hasIcon()" class="{{menu.icon}}"></i>
+  {{menu.text }}
+  <span *ngIf="hasBadge()" [ngClass]="'badge badge-' + menu.badge.variant">{{ menu.badge.text }}</span>
+</a>
+
+<ng-template #external>
+  <a [ngClass]="'nav-link'" href="{{menu.externalLink}}">
+    <i *ngIf="hasIcon()" class="{{menu.icon}}"></i>
+    {{ menu.text }}
+    <span *ngIf="hasBadge()" [ngClass]="'badge badge-' + menu.badge.variant">{{ menu.badge.text }}</span>
+  </a>
+</ng-template>

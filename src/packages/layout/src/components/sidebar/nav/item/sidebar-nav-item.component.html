@@ -1,0 +1,13 @@
+<li *ngIf="!isDropdown(); else dropdown" [ngClass]="'nav-item'">
+  <app-sidebar-nav-link [menu]="item"></app-sidebar-nav-link>
+</li>
+
+<ng-template #dropdown>
+  <li [ngClass]="'nav-item nav-dropdown'"
+  [class.open]="isActive()"
+  routerLinkActive="open"
+  appNavDropdown
+  >
+  <app-sidebar-nav-dropdown [menu]="item"></app-sidebar-nav-dropdown>
+  </li>
+</ng-template>

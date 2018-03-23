@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthReducer GET_ROLES_SUCCESS should  set user roles 1`] = `
+Object {
+  "id": null,
+  "login": false,
+  "roles": Array [
+    "admin",
+  ],
+  "token": null,
+}
+`;
+
+exports[`AuthReducer LOGIN_SUCCESS should set login to true, user to user info 1`] = `
+Object {
+  "id": "testId",
+  "login": true,
+  "roles": Array [],
+  "token": "testToken",
+}
+`;
+
+exports[`AuthReducer undefined action should return the default state 1`] = `
+Object {
+  "id": null,
+  "login": false,
+  "roles": Array [],
+  "token": null,
+}
+`;
+
+exports[`AuthReducer wrong login payload sould Not authenticate a user 1`] = `
+Object {
+  "id": null,
+  "login": false,
+  "roles": Array [],
+  "token": null,
+}
+`;

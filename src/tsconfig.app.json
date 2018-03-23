@@ -1,13 +1,27 @@
 {
-  "extends": "../tsconfig.json",
+  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
-    "baseUrl": "./",
-    "module": "es2015",
-    "types": []
+    "outDir": "./dist/out-tsc",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "paths": {
+      "@dream/*": [
+        "./modules/*",
+        "./packages/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",
+    "setup-jest.ts",
+    "jest-global-mocks.ts",
     "**/*.spec.ts"
   ]
 }
